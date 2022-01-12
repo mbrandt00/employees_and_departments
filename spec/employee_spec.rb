@@ -8,4 +8,11 @@ RSpec.describe Employee do
   it 'will have a name' do
     expect(@bobbi.name).to eq('Bobbi Jaeger')
   end
-end 
+
+  it 'will have an age' do
+    expect(@bobbi.age).to eq(30)
+  end
+  it 'will have a salary' do
+    expect(@bobbi.salary).to eq(100000)
+  end 
+end
