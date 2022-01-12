@@ -1,13 +1,17 @@
 class Department
-  attr_reader :name, :employees, :expense
+  attr_reader :name, :employees, :expenses
   def initialize(name)
     @name = name
     @employees = []
-    @expense = 0
+    @expenses = 0
   end
 
   def hire(employee)
     @employees << employee
   end
+
+  def expense(num)
+    @expenses += num
+  end 
 
 end
