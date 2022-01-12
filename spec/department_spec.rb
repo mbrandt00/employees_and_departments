@@ -24,4 +24,12 @@ RSpec.describe do Department
     @customer_service.hire(@aaron)
     expect(@customer_service.employees).to eq([@bobbi, @aaron])
   end
+  it 'initally has no expense' do
+    expect(@customer_service.expenses).to eq(0)
+  end
+  it 'can add expense' do
+    @customer_service.expense(100)
+    @customer_service.expense(25)
+    expect(@customer_service.expenses).to eq(125)
+  end
 end
